@@ -30,10 +30,10 @@ app.post("/",function(req,res){
         ]
     };
     const vdata = JSON.stringify(data);
-    const url = "https://us21.api.mailchimp.com/3.0/lists/8c827365f2";
+    const url = "https://us21.api.mailchimp.com/3.0/lists/***";
     const option = {
         method:"POST",
-        auth: "anystring:195ea08bd4060161578423d5399dd204-us21",
+        auth: "anystring:***",
     }
    const request =  https.request(url , option , function(response){
     if(response.statusCode===200){res.sendFile(__dirname+"/success.html");}
@@ -55,7 +55,3 @@ app.post("/failure", function(req,res){
 app.listen(process.env.PORT||3000, function () { console.log("server is activated on port 3000") });
 
 
-//API KEY
-// 195ea08bd4060161578423d5399dd204-us21
-//Audience ID
-// 8c827365f2
